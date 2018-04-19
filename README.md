@@ -20,3 +20,5 @@ Click Save, then restart Spark and any other components that require a restart.
 
 # https://github.com/apache/spark/blob/master/docs/sql-programming-guide.md
 
+# https://issues.apache.org/jira/browse/SPARK-15705
+
