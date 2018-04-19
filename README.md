@@ -17,3 +17,6 @@ spark.sql.hive.convertMetastoreOrc=true – Enables the new ORC format to read/w
 spark.sql.orc.char.enabled=true – Enables the new ORC format to use CHAR types to read Hive tables. By default, STRING types are used for performance reasons. This is an optional configuration for Hive compatibility.
 
 Click Save, then restart Spark and any other components that require a restart.
+
+# https://github.com/apache/spark/blob/master/docs/sql-programming-guide.md
+
