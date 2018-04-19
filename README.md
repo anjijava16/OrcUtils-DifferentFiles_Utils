@@ -22,3 +22,53 @@ Click Save, then restart Spark and any other components that require a restart.
 
 # https://issues.apache.org/jira/browse/SPARK-15705
 
+
+scala> spark.table("default.test").printSchema
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- state: string (nullable = true)
+
+scala> sql("set spark.sql.hive.convertMetastoreOrc=true")
+res1: org.apache.spark.sql.DataFrame = [key: string, value: string]
+
+scala> spark.table("default.test").printSchema
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- state: string (nullable = true)
+
+scala> sc.version
+res3: String = 2.1.1
+scala> spark.table("default.test").printSchema
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- state: string (nullable = true)
+
+
+scala> sql("set spark.sql.hive.convertMetastoreOrc=true")
+res1: org.apache.spark.sql.DataFrame = [key: string, value: string]
+
+scala> spark.table("default.test").printSchema
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- state: string (nullable = true)
+
+scala> sc.version
+res3: String = 2.2.0
+Permalink
+dongjoon Dongjoon Hyun added a comment - 07/Dec/17 00:17
+Since 2.2.1 is released, I'll update the result from 2.2.1, too.
+
+scala> sql("set spark.sql.hive.convertMetastoreOrc=true")
+scala> spark.table("default.test").printSchema
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- state: string (nullable = true)
+
+scala> spark.version
+res2: String = 2.2.1
+
